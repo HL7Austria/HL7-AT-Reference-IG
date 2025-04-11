@@ -1,7 +1,6 @@
 {% include content-header.md %}
 
-
-# Table of Contents
+<h2 class="no-number">Table of Contents</h2>
 
 This is the Table of Contents for the Content IG section.
 

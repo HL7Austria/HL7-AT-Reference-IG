@@ -31,3 +31,9 @@
     </nav>
   </div>
 </div>
+
+<style>
+  .no-number {
+    --heading-prefix: none;
+  }
+</style>

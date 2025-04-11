@@ -1,6 +1,6 @@
 {% include specification-header.md %}
 
-# Specification IGs
+<h2 class="no-number">Home</h2>
 
 Welcome to the Specification IG section.
 

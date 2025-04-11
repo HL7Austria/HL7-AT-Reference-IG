@@ -1,6 +1,6 @@
 {% include content-header.md %}
 
-# Artifacts
+<h2 class="no-number">Artifacts</h2>
 
 This page lists all artifacts related to the Content IG.
 

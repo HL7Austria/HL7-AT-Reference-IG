@@ -2,6 +2,11 @@ This page contains helpful information for IG authors.
 
 ### TBD
 
+Possible topics:
+- how to specify the dependency on another IG
+- references to other IG guides
+- convention on IG's ID and canonical
+- ...
 
 ### Naming conventions
 
@@ -62,7 +67,7 @@ The **StructureDefintion Id** of an extension follows a suffix pattern, meaning 
 
 **FieldItAdds** = **unique naming** for field **lowerCamelCase**
 
-Example: Religions for a patient registered in Austria 
+Example: Religions for a patient registered in Austria
 ```
 Realm = Austria -> at-
 Use = HL7 Austria FHIR Core -> core-

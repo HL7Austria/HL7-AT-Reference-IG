@@ -128,12 +128,13 @@ pages:
 menu:
   Home: index.html
   Developer's Handbook: developers-handbook.html
-  Model IGs: 
+  How to read an IG: howToReadAnIG.html
+  Model IGs:
     Home: model.html
     Table of Contents: model-toc.html
     Artifacts: model-artifacts.html
     Other: model-other.html
-  Specification IGs: 
+  Specification IGs:
     Home: specification.html
     Table of Contents: specification-toc.html
     Artifacts: specification-artifacts.html
@@ -147,8 +148,6 @@ menu:
     Developer's Guide: content-developer-guide.html
     Mapping: content-mapping.html
     Other: content-other.html
-  How to read an IG: howToReadAnIG.html
-
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

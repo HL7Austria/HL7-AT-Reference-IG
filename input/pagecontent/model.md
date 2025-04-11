@@ -1,8 +1,8 @@
 {% include model-header.md %}
 
-# Model IGs
+<h2 class="no-number">Home</h2>
 
-Welcome to the Model IG section. 
+Welcome to the Model IG section.
 
 This is a placeholder for the description of this section.
 

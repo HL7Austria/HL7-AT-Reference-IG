@@ -20,7 +20,7 @@
                 <li class="divider"></li>
                 <li>
                   <a target="_blank" href="{{site.data.fhir.path}}index.html">
-                    FHIR® Spec <img src="external.png" style="text-align: baseline"/>
+                    FHIR® Spec
                   </a>
                 </li>
               </ul>
@@ -31,3 +31,9 @@
     </nav>
   </div>
 </div>
+
+<style>
+  .no-number {
+    --heading-prefix: none;
+  }
+</style>

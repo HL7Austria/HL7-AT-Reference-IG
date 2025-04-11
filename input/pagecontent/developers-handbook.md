@@ -1,10 +1,16 @@
-# TBD
+This page contains helpful information for IG authors.
 
-This page contains helpful information for IG authors. 
+### TBD
 
-# Naming conventions
+Possible topics:
+- how to specify the dependency on another IG
+- references to other IG guides
+- convention on IG's ID and canonical
+- ...
 
-In general the HL7 [FHIR naming conventions](http://wiki.hl7.org/index.php?title=FHIR_Guide_to_Designing_Resources#Naming_Rules_.26_Guidelines) apply. Essentially these conventions ask for **consistency** and **precision** (i.e. minimizing ambiguity, while ensuring the meaning is easily understood) when naming fields, resources or operations.
+### Naming conventions
+
+In general the HL7 [FHIR naming conventions](http://wiki.hl7.org/index.php?title=FHIR_Guide_to_Designing_Resources###Naming_Rules_.26_Guidelines) apply. Essentially these conventions ask for **consistency** and **precision** (i.e. minimizing ambiguity, while ensuring the meaning is easily understood) when naming fields, resources or operations.
 
 Most of these guidelines are suggestions, except the following rules that *must* be followed:
 -  be U.S. English (spelled correctly!)
@@ -15,7 +21,7 @@ Most of these guidelines are suggestions, except the following rules that *must*
    - elements must be lowerCamelCase - ex. `at-core-ext-address-additionalInformation`, the element address.additionalInformation is lowerCamelCase
    - operations must be lower case - e. `at-core-exampleoperation` example operation is all lower case
 
-## Profile Naming conventions
+#### Profile Naming conventions
 
 The **StructureDefintion Id** of a profile follows a prefix pattern, meaning that a name from left to right goes from specific to generic. It uses UpperCamelCase.
 
@@ -45,7 +51,7 @@ ParentProfile = Immunization -> immunization
 at-elga-immunization
 ```
 
-## Extension Naming conventions
+#### Extension Naming conventions
 
 The **StructureDefintion Id** of an extension follows a suffix pattern, meaning that a name from left to right goes from generic to specific.
 
@@ -61,7 +67,7 @@ The **StructureDefintion Id** of an extension follows a suffix pattern, meaning 
 
 **FieldItAdds** = **unique naming** for field **lowerCamelCase**
 
-Example: Religions for a patient registered in Austria 
+Example: Religions for a patient registered in Austria
 ```
 Realm = Austria -> at-
 Use = HL7 Austria FHIR Core -> core-

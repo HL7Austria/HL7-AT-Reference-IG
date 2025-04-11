@@ -3,8 +3,8 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.at.fhir.reference.ig
-canonical: http://hl7.at/fhir/HL7ATReferenceIG
+id: hl7.at.fhir.reference-ig
+canonical: https://fhir.hl7.at/hl7at/reference-ig
 name: HL7AustriaReferenceIG
 title: HL7 Austria Reference IG
 # description: Example Implementation Guide for getting started with SUSHI
@@ -43,7 +43,58 @@ publisher:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-# pages:
+pages:
+  index.md:
+    title: Reference IG
+  developers-handbook.md:
+    title: Developer's Handbook
+  howToReadAnIG.md:
+    title: How to read an IG
+  model.md:
+    title: Model IGs
+    model-toc.md:
+      title: Model IGs - Table of Contents
+    model-artifacts.md:
+      title: Model IGs - Artifacts
+    model-other.md:
+      title: Model IGs - Other
+      model-about.md:
+        title: Model IGs - About
+      model-downloads.md:
+        title: Model IGs - Downloads
+  specification.md:
+    title: Specification IGs
+    specification-toc.md:
+      title: Specification IGs - Table of Contents
+    specification-artifacts.md:
+      title: Specification IGs - Artifacts
+    specification-other.md:
+      title: Specification IGs - Other
+      specification-about.md:
+        title: Specification IGs - About
+      specification-downloads.md:
+        title: Specification IGs - Downloads
+  content.md:
+    title: Content IGs
+    content-toc.md:
+      title: Content IGs - Table of Contents
+    content-background.md:
+      title: Content IGs - Background
+    content-general-guide.md:
+      title: Content IGs - General Guide
+    content-developer-guide.md:
+      title: Content IGs - Developer's Guide
+    content-mapping.md:
+      title: Content IGs - Mappings
+    content-artifacts.md:
+      title: Content IGs - Artifacts
+    content-other.md:
+      title: Content IGs - Other
+      content-about.md:
+        title: Content IGs - About
+      content-downloads.md:
+        title: Content IGs - Downloads
+
 #   index.md:
 #     title: Example Home
 #   implementation.xml:
@@ -77,12 +128,13 @@ publisher:
 menu:
   Home: index.html
   Developer's Handbook: developers-handbook.html
-  Model IGs: 
+  How to read an IG: howToReadAnIG.html
+  Model IGs:
     Home: model.html
     Table of Contents: model-toc.html
     Artifacts: model-artifacts.html
     Other: model-other.html
-  Specification IGs: 
+  Specification IGs:
     Home: specification.html
     Table of Contents: specification-toc.html
     Artifacts: specification-artifacts.html
@@ -96,8 +148,6 @@ menu:
     Developer's Guide: content-developer-guide.html
     Mapping: content-mapping.html
     Other: content-other.html
-  How to read an IG: howToReadAnIG.html
-
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

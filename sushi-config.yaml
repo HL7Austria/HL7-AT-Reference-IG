@@ -43,7 +43,58 @@ publisher:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-# pages:
+pages:
+  index.md:
+    title: Reference IG
+  developers-handbook.md:
+    title: Developer's Handbook
+  howToReadAnIG.md:
+    title: How to read an IG
+  model.md:
+    title: Model IGs
+    model-toc.md:
+      title: Model IGs - Table of Contents
+    model-artifacts.md:
+      title: Model IGs - Artifacts
+    model-other.md:
+      title: Model IGs - Other
+      model-about.md:
+        title: Model IGs - About
+      model-downloads.md:
+        title: Model IGs - Downloads
+  specification.md:
+    title: Specification IGs
+    specification-toc.md:
+      title: Specification IGs - Table of Contents
+    specification-artifacts.md:
+      title: Specification IGs - Artifacts
+    specification-other.md:
+      title: Specification IGs - Other
+      specification-about.md:
+        title: Specification IGs - About
+      specification-downloads.md:
+        title: Specification IGs - Downloads
+  content.md:
+    title: Content IGs
+    content-toc.md:
+      title: Content IGs - Table of Contents
+    content-background.md:
+      title: Content IGs - Background
+    content-general-guide.md:
+      title: Content IGs - General Guide
+    content-developer-guide.md:
+      title: Content IGs - Developer's Guide
+    content-mapping.md:
+      title: Content IGs - Mappings
+    content-artifacts.md:
+      title: Content IGs - Artifacts
+    content-other.md:
+      title: Content IGs - Other
+      content-about.md:
+        title: Content IGs - About
+      content-downloads.md:
+        title: Content IGs - Downloads
+
 #   index.md:
 #     title: Example Home
 #   implementation.xml:

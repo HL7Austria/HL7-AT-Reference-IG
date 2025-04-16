@@ -50,50 +50,62 @@ pages:
     title: Developer's Handbook
   howToReadAnIG.md:
     title: How to read an IG
-  model.md:
-    title: Model IGs
-    model-toc.md:
-      title: Model IGs - Table of Contents
-    model-artifacts.md:
-      title: Model IGs - Artifacts
-    model-other.md:
-      title: Model IGs - Other
-      model-about.md:
-        title: Model IGs - About
-      model-downloads.md:
-        title: Model IGs - Downloads
-  specification.md:
-    title: Specification IGs
-    specification-toc.md:
-      title: Specification IGs - Table of Contents
-    specification-artifacts.md:
-      title: Specification IGs - Artifacts
-    specification-other.md:
-      title: Specification IGs - Other
-      specification-about.md:
-        title: Specification IGs - About
-      specification-downloads.md:
-        title: Specification IGs - Downloads
-  content.md:
-    title: Content IGs
-    content-toc.md:
-      title: Content IGs - Table of Contents
-    content-background.md:
-      title: Content IGs - Background
-    content-general-guide.md:
-      title: Content IGs - General Guide
-    content-developer-guide.md:
-      title: Content IGs - Developer's Guide
-    content-mapping.md:
-      title: Content IGs - Mappings
-    content-artifacts.md:
-      title: Content IGs - Artifacts
-    content-other.md:
-      title: Content IGs - Other
-      content-about.md:
-        title: Content IGs - About
-      content-downloads.md:
-        title: Content IGs - Downloads
+  base.md:
+    title: Base IGs
+    base-toc.md:
+      title: Base IGs - Table of Contents
+    base-artifacts.md:
+      title: Base IGs - Artifacts
+    base-other.md:
+      title: Base IGs - Other
+      base-about.md:
+        title: Base IGs - About
+      base-downloads.md:
+        title: Base IGs - Downloads
+  framework.md:
+    title: Framework IGs
+    framework-toc.md:
+      title: Framework IGs - Table of Contents
+    framework-artifacts.md:
+      title: Framework IGs - Artifacts
+    framework-other.md:
+      title: Framework IGs - Other
+      framework-about.md:
+        title: Framework IGs - About
+      framework-downloads.md:
+        title: Framework IGs - Downloads
+  use-case.md:
+    title: Use Case IGs
+    use-case-toc.md:
+      title: Use Case IGs - Table of Contents
+    use-case-background.md:
+      title: Use Case IGs - Background
+    use-case-artifacts.md:
+      title: Use Case IGs - Artifacts
+    use-case-optional.md:
+      title: Use Case IGs - Optional
+      use-case-use-cases.md:
+        title: Use Case IGs - [Use Cases]
+      use-case-workflow.md:
+        title: Use Case IGs - [Workflow]
+      use-case-actors.md:
+        title: Use Case IGs - [Actors]
+      use-case-mapping.md:
+        title: Use Case IGs - [Mapping]
+      use-case-terminologies.md:
+        title: Use Case IGs - [Terminologies]
+      use-case-technical-information.md:
+        title: Use Case IGs - [Technical Information]
+      use-case-model.md:
+        title: Use Case IGs - [Model]
+      use-case-examples.md:
+        title: Use Case IGs - [Examples]
+    use-case-other.md:
+      title: Use Case IGs - Other
+      use-case-about.md:
+        title: Use Case IGs - About
+      use-case-downloads.md:
+        title: Use Case IGs - Downloads
 
 #   index.md:
 #     title: Example Home
@@ -129,25 +141,23 @@ menu:
   Home: index.html
   Developer's Handbook: developers-handbook.html
   How to read an IG: howToReadAnIG.html
-  Model IGs:
-    Home: model.html
-    Table of Contents: model-toc.html
-    Artifacts: model-artifacts.html
-    Other: model-other.html
-  Specification IGs:
-    Home: specification.html
-    Table of Contents: specification-toc.html
-    Artifacts: specification-artifacts.html
-    Other: specification-other.html
-  Content IGs:
-    Home: content.html
-    Table of Contents: content-toc.html
-    Artifacts: content-artifacts.html
-    Background: content-background.html
-    General Guide: content-general-guide.html
-    Developer's Guide: content-developer-guide.html
-    Mapping: content-mapping.html
-    Other: content-other.html
+  Base IGs:
+    Home: base.html
+    Table of Contents: base-toc.html
+    Artifacts: base-artifacts.html
+    Other: base-other.html
+  Framework IGs:
+    Home: framework.html
+    Table of Contents: framework-toc.html
+    Artifacts: framework-artifacts.html
+    Other: framework-other.html
+  Use Case IGs:
+    Home: use-case.html
+    Table of Contents: use-case-toc.html
+    Artifacts: use-case-artifacts.html
+    Background: use-case-background.html
+    [Optional]: use-case-optional.html
+    Other: use-case-other.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

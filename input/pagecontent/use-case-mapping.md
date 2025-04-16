@@ -1,12 +1,15 @@
-{% include model-header.md %}
+{% include use-case-header.md %}
 
-<h2 class="no-number">Other</h2>
+<h2 class="no-number">Mapping</h2>
 
-Additional information and resources for the Model IG.
+Details on how data maps to the Use Case IG structures.
 
 This is a placeholder for the description of this IG section.
 
 <h3 class="no-number">Possible Subsections</h3>
 
 Subsections of this section can include but are not limited to:
-- XY
+- TBD
+- ...
+
+{% include general-footer.md %}

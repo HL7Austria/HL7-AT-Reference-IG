@@ -1,8 +1,8 @@
-{% include model-header.md %}
+{% include base-header.md %}
 
 <h2 class="no-number">Downloads</h2>
 
-Resources and downloadable materials for the Model IG.
+Resources and downloadable materials for the Base IG.
 
 This section could look like this:
 
@@ -30,3 +30,5 @@ All of the examples that are used in this Implementation Guide are available for
 
 - [XML](examples.xml.zip)
 - [JSON](examples.json.zip)
+
+{% include general-footer.md %}

@@ -1,8 +1,8 @@
-{% include specification-header.md %}
+{% include framework-header.md %}
 
 <h2 class="no-number">Other</h2>
 
-Additional information and resources for the Specification IG.
+Additional information and resources for the Framework IG.
 
 This is a placeholder for the description of this section.
 
@@ -10,3 +10,5 @@ This is a placeholder for the description of this section.
 
 Subsections of this section can include but are not limited to:
 - XY
+
+{% include general-footer.md %}

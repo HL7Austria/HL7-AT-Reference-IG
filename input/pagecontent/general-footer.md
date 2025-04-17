@@ -1,6 +1,6 @@
 
 
-<script type="text/javascript" src="{{site.data.info.assets}}assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="{{site.data.info.assets}}assets/js/jquery.js"> </script>
 <script type="text/javascript" src="{{site.data.info.assets}}assets/js/jquery-ui.min.js"> </script>
 {% if includetabscripts %}
   <script type="text/javascript" src="{{site.data.info.assets}}assets/js/tabs.js"> </script>
@@ -8,8 +8,8 @@
 <script type="text/javascript" src="{{site.data.info.assets}}assets/js/window-hash.js"> </script>
 
 <div style="height: 4rem;"> </div>
-<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
-<div class="container">  <!-- container -->
+<div id="segment-footer" igtool="footer" class="segment"><!-- segment-footer -->
+<div class="container"><!-- container -->
 {% if shownav == 'y' %}
 <div style="background-color:var(--footer-nav-bg-color)">
   <table style="width:100%">
@@ -45,13 +45,13 @@
       {% include fragment-footer.html %}
     </span>
   </p>
-</div>  <!-- /inner-wrapper -->
-</div>  <!-- /container -->
-</div>  <!-- /segment-footer -->
-<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
-<div class="container">  <!-- container -->
-</div>  <!-- /container -->
-</div>  <!-- /segment-post-footer -->
+</div><!-- /inner-wrapper -->
+</div><!-- /container -->
+</div><!-- /segment-footer -->
+<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+<div class="container"><!-- container -->
+</div><!-- /container -->
+</div><!-- /segment-post-footer -->
 
 
 </div>

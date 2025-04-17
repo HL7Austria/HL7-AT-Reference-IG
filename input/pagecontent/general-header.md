@@ -3,7 +3,7 @@
   <strong>Note:</strong> The content below is a representation of what this category of IG should look like, shown here as part of the HL7 Austria Reference IG.
 </div>
 
-<div style="border: 5px solid #ddd; border-radius: 6px; padding: 1rem; margin: 1.5rem 0;">
+<div style="border: 5px solid #ddd; border-radius: 6px; padding: 1rem; margin: 1.5rem 0;" markdown="1">
 
 
 <div id="segment-header" class="segment">

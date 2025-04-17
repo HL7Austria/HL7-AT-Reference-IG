@@ -7,7 +7,7 @@
 {% endif %}
 <script type="text/javascript" src="{{site.data.info.assets}}assets/js/window-hash.js"> </script>
 
-<div style="height: 4rem;"> </div>
+<!-- <div style="height: 4rem;"> </div> -->
 <div id="segment-footer" igtool="footer" class="segment"><!-- segment-footer -->
 <div class="container"><!-- container -->
 {% if shownav == 'y' %}

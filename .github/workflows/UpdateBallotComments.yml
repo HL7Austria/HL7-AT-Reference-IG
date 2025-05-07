@@ -104,7 +104,7 @@ jobs:
 
           comments = []
           for d in all_discussions:
-            if d.get('category', {}).get('name') != 'Comment':
+            if d.get('category', {}).get('name') != 'General':
                 continue
             try:
                 #decoded = base64.b64decode(d['title']).decode('utf-8')

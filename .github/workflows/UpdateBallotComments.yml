@@ -1,0 +1,149 @@
+
+# Workflow to update the ballot comments in comments.json
+name: UpdateBallotComments
+
+on:
+  discussion:
+    types: [created]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  discussions: read
+
+jobs:
+  update-comments:
+    runs-on: ubuntu-latest
+    env:
+      REPO_NAME: ${{ github.event.repository.name }}
+    steps:
+      - name: Checkout Ballot Comment Repo
+        uses: actions/checkout@v4
+        with:
+          repository: HL7Austria/ballot-comments
+          path: .
+          token: ${{ secrets.ROBO_OLIVER }}
+
+      - name: Fetch Discussions
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          FOLDER="discussions-${REPO_NAME}"
+          mkdir -p "$FOLDER"
+          echo '[]' > "$FOLDER/discussions-all.json"
+          NEXT="first"
+
+          while [ ! -z "$NEXT" ]; do
+            echo "Fetching discussions after cursor: $NEXT"
+            if [ "$NEXT" == "first" ]; then
+              echo "Fetching first"
+              RESPONSE=$(gh api graphql --field query='
+                query {
+                  repository(owner: "HL7Austria", name: "'"${REPO_NAME}"'") {
+                    discussions(first: 100) {
+                      pageInfo { endCursor hasNextPage }
+                      nodes {
+                        title
+                        url
+                        number
+                        createdAt
+                        category { name }
+                      }
+                    }
+                  }
+                }
+              ')
+            else
+              echo "Fetching continuous"
+              RESPONSE=$(gh api graphql --field query='
+                query ($cursor: String!) {
+                  repository(owner: "HL7Austria", name: "'"${REPO_NAME}"'") {
+                    discussions(first: 100, after: $cursor) {
+                      pageInfo { endCursor hasNextPage }
+                      nodes {
+                        title
+                        url
+                        number
+                        createdAt
+                        category { name }
+                      }
+                    }
+                  }
+                }
+              ' -f cursor="$NEXT")
+            fi
+
+            echo "$RESPONSE" | jq '.data.repository.discussions.nodes' > $FOLDER/page.json
+
+            # Merge with existing
+            jq -s '.[0] + .[1]' $FOLDER/discussions-all.json $FOLDER/page.json > $FOLDER/merged.json
+            mv $FOLDER/merged.json $FOLDER/discussions-all.json
+            NEXT=$(echo "$RESPONSE" | jq -r '.data.repository.discussions.pageInfo | if .hasNextPage then .endCursor else "" end')
+          done
+
+      - name: Generate comments.json
+        shell: python
+        run: |
+          import os, json, base64
+          def decompress_xpath(compressed):
+              parts = compressed.split('/')
+              expanded = []
+
+              for part in parts:
+                  if '*' in part:
+                      tag, count = part.split('*')
+                      expanded.extend([tag] * int(count))
+                  elif part:
+                      expanded.append(part)
+
+              return '/' + '/'.join(expanded)
+
+          folder = f'discussions-{os.environ["REPO_NAME"]}'
+          with open(f'{folder}/discussions-all.json', 'r') as f:
+            all_discussions = json.load(f)
+
+          comments = []
+          for d in all_discussions:
+            if d.get('category', {}).get('name') != 'Comment':
+                continue
+            try:
+                #decoded = base64.b64decode(d['title']).decode('utf-8')
+                #parts = decoded.split('|')
+                parts = d['title'].split('|')
+                if len(parts) != 4:
+                    continue
+                comments.append({
+                    'commentId': d['title'],
+                    'page': parts[0],
+                    'startXPath': decompress_xpath(parts[1]),
+                    'startOffset': int(parts[2]),
+                    'endOffset': int(parts[3]),
+                    'url': d['url'],
+                    'createdAt': d['createdAt'],
+                    'number': d['number']
+                    })
+            except Exception:
+              continue
+
+          with open(f'{folder}/comments.json', 'w') as f:
+            json.dump(comments, f, indent=2)
+
+      - name: Commit comments.json
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          if [ -f discussions-${REPO_NAME}/comments.json ]; then
+            git add discussions-${REPO_NAME}/comments.json
+            git commit -m "Update comments.json from discussions event" || echo "No changes to commit"
+          else
+            echo "No comments.json generated. Skipping commit."
+          fi
+  
+      - name: Push updated comments.json
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.ROBO_OLIVER }}
+          repository: HL7Austria/ballot-comments
+          branch: main
+        
+        

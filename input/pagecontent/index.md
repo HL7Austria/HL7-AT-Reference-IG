@@ -2,7 +2,7 @@ This Implementation Guide (IG) serves as a reference for all FHIR IGs developed 
 
 To support consistency and clarity, three distinct categories of IGs have been defined: Base IGs, Framework IGs, and Use Case IGs. Each category follows its own set of guidelines, which are outlined on their respective reference pages.
 
-## Mandatory and Optional Constraints 
+## Mandatory and Optional Constraints
 
 Each category of Implementation Guide (IG) follows a defined mandatory structure, outlined in the corresponding templates. In addition, a set of optional tabs is available for use when relevant content is present in the IG. These optional elements are indicated using square brackets [ ].
 
@@ -13,7 +13,7 @@ For example, if the IG includes a CDA to FHIR mapping, the "Mapping" tab becomes
 Before creating your own IG, please determine which category best fits your use case and structure your guide accordingly. An overview of the categories is provided below:
 
 ### Base Implementation Guides
-- Purpose: Define core FHIR elements, reusable data structures, constraints, extensions. 
+- Purpose: Define core FHIR elements, reusable data structures, constraints, extensions.
 - Examples: Country-specific base profiles, datatype constraints, terminology bindings.
 
 #### Base IG Examples:
@@ -42,3 +42,4 @@ Below are some representative IGs that belong to this category:
 - [Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)](https://fhir.hl7.at/r5-ELGA-MOPED-main/index.html)
 - [Integrierte Versorgung Herzinsuffizienz (R4)](https://fhir.hl7.at/r4-ELGA-IV-Herzinsuffizienz-main/index.html)
 - [ELGA e-Medikation FHIR R5 Implementierungsleitfaden](https://fhir.hl7.at/r5-ELGA-e-medikation-main/index.html)
+

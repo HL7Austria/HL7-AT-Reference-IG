@@ -74,46 +74,112 @@ pages:
     title: Framework IGs
     framework-toc.md:
       title: Framework IGs - Table of Contents
+    framework-introduction.md:
+      title: Framework IGs - Introduction
+      framework-scope-and-content.md:
+        title: Framework IGs - Scope and Content
+      framework-background.md:
+        title: Framework IGs - Background
+      framework-challenges.md:
+        title: Framework IGs - Challenges
+    framework-functional.md:
+      title: Framework IGs - Functional
+      framework-design-choices.md:
+        title: Framework IGs - Design choices
+      framework-system-actors.md:
+        title: Framework IGs - System Actors
+      framework-transactions.md:
+        title: Framework IGs - [Transactions]
+      framework-workflowmanagement.md:
+        title: Framework IGs - [Workflowmanagement]
+      framework-obligations.md:
+        title: Framework IGs - [Obligations]
+      framework-logical-models.md:
+        title: Framework IGs - [Logical Models]
+    framework-use-cases.md:
+      title: Framework IGs - Use Cases
+      framework-example-use-case-1.md:
+        title: Framework IGs - [Example Use Case 1]
+      framework-example-use-case-2.md:
+        title: Framework IGs - [Example Use Case 2]
+      framework-example-use-case-3.md:
+        title: Framework IGs - [Example Use Case 3]
     framework-artifacts.md:
       title: Framework IGs - Artifacts
-    framework-other.md:
-      title: Framework IGs - Other
-      framework-about.md:
-        title: Framework IGs - About
+    framework-about.md:
+      title: Framework IGs - About
+      framework-authors.md:
+        title: Framework IGs - Authors and Contributors
       framework-downloads.md:
         title: Framework IGs - Downloads
+      framework-dependencies.md:
+        title: Framework IGs - Dependencies
+      framework-copyright.md:
+        title: Framework IGs - Copyright
+      framework-cross-version-analysis.md:
+        title: Framework IGs - Cross-Version Analysis
+      framework-known-issues.md:
+        title: Framework IGs - Known Issues
   use-case.md:
     title: Use Case IGs
     use-case-toc.md:
       title: Use Case IGs - Table of Contents
-    use-case-background.md:
-      title: Use Case IGs - Background
+    use-case-introduction.md:
+      title: Use Case IGs - Introduction
+      use-case-scope-and-content.md:
+        title: Use Case IGs - Scope and Content
+      use-case-background.md:
+        title: Use Case IGs - Background
+      use-case-challenges.md:
+        title: Use Case IGs - Challenges
+    use-case-functional.md:
+      title: Use Case IGs - Functional
+      use-case-design-choices.md:
+        title: Use Case IGs - Design choices
+      use-case-system-actors.md:
+        title: Use Case IGs - System Actors
+      use-case-transactions.md:
+        title: Use Case IGs - [Transactions]
+      use-case-workflowmanagement.md:
+        title: Use Case IGs - [Workflowmanagement]
+      use-case-obligations.md:
+        title: Use Case IGs - [Obligations]
+      use-case-logical-models.md:
+        title: Use Case IGs - [Logical Models]
+    use-case-use-cases.md:
+      title: Use Case IGs - Use Cases
+      use-case-example-use-case-1.md:
+        title: Use Case IGs - [Example Use Case 1]
+      use-case-example-use-case-2.md:
+        title: Use Case IGs - [Example Use Case 2]
+      use-case-example-use-case-3.md:
+        title: Use Case IGs - [Example Use Case 3]
+    use-case-mappings.md:
+      title: Use Case IGs - Mappings
     use-case-artifacts.md:
       title: Use Case IGs - Artifacts
     use-case-optional.md:
       title: Use Case IGs - Optional
-      use-case-use-cases.md:
-        title: Use Case IGs - [Use Cases]
-      use-case-workflow.md:
-        title: Use Case IGs - [Workflow]
-      use-case-actors.md:
-        title: Use Case IGs - [Actors]
-      use-case-mapping.md:
-        title: Use Case IGs - [Mapping]
       use-case-terminologies.md:
         title: Use Case IGs - [Terminologies]
       use-case-technical-information.md:
         title: Use Case IGs - [Technical Information]
-      use-case-model.md:
-        title: Use Case IGs - [Model]
       use-case-examples.md:
         title: Use Case IGs - [Examples]
-    use-case-other.md:
-      title: Use Case IGs - Other
-      use-case-about.md:
-        title: Use Case IGs - About
+    use-case-about.md:
+      title: Use Case IGs - About
+      use-case-authors.md:
+        title: Use Case IGs - Authors and Contributors
       use-case-downloads.md:
         title: Use Case IGs - Downloads
+      use-case-dependencies.md:
+        title: Use Case IGs - Dependencies
+      use-case-copyright.md:
+        title: Use Case IGs - Copyright
+      use-case-cross-version-analysis.md:
+        title: Use Case IGs - Cross-Version Analysis
+      use-case-known-issues.md:
+        title: Use Case IGs - Known Issues
 
 #   index.md:
 #     title: Example Home
@@ -157,15 +223,21 @@ menu:
   Framework IGs:
     Home: framework.html
     Table of Contents: framework-toc.html
+    Introduction: framework-introduction.html
+    Functional: framework-functional.html
+    Use-Cases: framework-use-cases.html
     Artifacts: framework-artifacts.html
-    Other: framework-other.html
+    About: framework-about.html
   Use Case IGs:
     Home: use-case.html
     Table of Contents: use-case-toc.html
+    Introduction: use-case-introduction.html
+    Functional: use-case-functional.html
+    Use Cases: use-case-use-cases.html
+    Mappings: use-case-mappings.html
     Artifacts: use-case-artifacts.html
-    Background: use-case-background.html
-    [Optional]: use-case-optional.html
-    Other: use-case-other.html
+    [TBD]: use-case-optional.html
+    About: use-case-about.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

@@ -1,0 +1,7 @@
+{% include framework-header.md %}
+
+<h2 class="no-number">System Actors</h2>
+
+This is a placeholder for the description of this section.
+
+{% include general-footer.md %}

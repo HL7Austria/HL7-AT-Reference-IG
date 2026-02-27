@@ -2,6 +2,6 @@
 
 <h2 class="no-number">Use Cases</h2>
 
-This is a placeholder for the description of this section.
+Real-world clinical or administrative workflows implemented by the IG; short narrative descriptions and flow diagrams
 
 {% include general-footer.md %}

@@ -1,0 +1,45 @@
+{
+  "info": {
+    "_postman_id": "5743df7b-72c3-4aa9-ba22-ad40270a34c8",
+    "name": "auto-ig-builder",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "10720655"
+  },
+  "item": [
+    {
+      "name": "Trigger auto-ig-builder",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"ref\": \"refs/heads/{{branch}}\", \r\n    \"repository\": {\r\n        \"full_name\": \"{{repository}}\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://us-central1-fhir-org-starter-project.cloudfunctions.net/ig-commit-trigger",
+          "protocol": "https",
+          "host": [
+            "us-central1-fhir-org-starter-project",
+            "cloudfunctions",
+            "net"
+          ],
+          "path": [
+            "ig-commit-trigger"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

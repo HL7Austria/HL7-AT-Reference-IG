@@ -4,20 +4,20 @@ The following applies to elements other than `code` (in this case we focused on 
 
 ### tl;dr - IF YOU DO NOT WANT TO READ THE WHOLE PAGE
 
-**`exactly` grundsätzlich nicht verwenden!** `exactly` führt zu beträchtlichen Einschränkungen (siehe unten TODO: Link einfügen)
+**Do not use `exactly` in general!** `exactly` leads to considerable restrictions (see below).
 
-Wenn im Slice **zumindest 1 Coding** mit den angegeben Werten vorkommen soll:
-- `discriminator.path = "code"` (=CodeableConcept-Ebene)
+If **at least 1 Coding** with the specified values should occur in the slice:
+- `discriminator.path = "code"` (=CodeableConcept level)
 
-Wenn im Slice **genau 1 Coding** mit den angegeben Werten vorkommen soll und kein anderes Coding:
-- `discriminator.path = "code.coding"` oder `discriminator.path = "code.coding.code"` (=Coding- oder Code-Ebene)
-- Zwischen den beiden gibt es keinen Unterschied, wenn `exactly` nicht verwendet wird.
+If **exactly 1 Coding** with the specified values should occur in the slice and no other Coding:
+- `discriminator.path = "code.coding"` or `discriminator.path = "code.coding.code"` (=Coding or Code level)
+- There is no difference between the two if `exactly` is not used.
 
-### Grundregeln
+### Basic rules
 
-#### Zusammenhang zwischen discriminator.path und Slice-Ebene
+#### Relationship between discriminator.path and slice level
 
-**`discriminator.path` und die Ebene auf der die einzelenen Slices angegeben werden, müssen übereinstimmen!** Siehe folgendes Beispiel.
+**`discriminator.path` and the level at which the individual slices are specified must match!** See the following example.
 
 <style>
 .my-table {
@@ -52,12 +52,12 @@ Wenn im Slice **genau 1 Coding** mit den angegeben Werten vorkommen soll und kei
 
 <table class="my-table">
   <tr>
-    <th>Richtig</th>
-    <th>Falsch</th>
+    <th>Correct</th>
+    <th>Wrong</th>
   </tr>
   <tr>
-    <td>Verwendung von <code>code</code> in <code>discriminator.path</code> und Festlegung des Codes auf <code>section.code</code>.</td>
-    <td>Verwendung von <code>code.coding.code</code> in <code>discriminator.path</code> und Festlegung des Codes auf <code>section.code</code>.</td>
+    <td>Use of <code>code</code> in <code>discriminator.path</code> and setting the code on <code>section.code</code>.</td>
+    <td>Use of <code>code.coding.code</code> in <code>discriminator.path</code> and setting the code on <code>section.code</code>.</td>
   </tr>
   <tr>
     <td class="correct"><pre>
@@ -87,18 +87,18 @@ Wenn im Slice **genau 1 Coding** mit den angegeben Werten vorkommen soll und kei
   </tr>
 </table>
 
-#### Einheitliche Slice-Ebene
+#### Consistent slice level
 
-**Alle Slices müssen die selbe Slice-Ebene verwenden!** Siehe folgendes Beispiel:
+**All slices must use the same slice level!** See the following example:
 
 <table class="my-table">
   <tr>
-    <th>Richtig</th>
-    <th>Falsch</th>
+    <th>Correct</th>
+    <th>Wrong</th>
   </tr>
   <tr>
-    <td>Verwendung von <code>code</code> in <code>discriminator.path</code> und Festlegung des Codes auf <code>section.code</code>.</td>
-    <td>Verwendung von <code>code</code> in <code>discriminator.path</code> und Festlegung des Codes auf <code>section.code.coding</code> für <code>Section2</code></td>
+    <td>Use of <code>code</code> in <code>discriminator.path</code> and setting the code on <code>section.code</code>.</td>
+    <td>Use of <code>code</code> in <code>discriminator.path</code> and setting the code on <code>section.code.coding</code> for <code>Section2</code></td>
   </tr>
   <tr>
     <td class="correct"><pre>
@@ -126,9 +126,9 @@ Wenn im Slice **genau 1 Coding** mit den angegeben Werten vorkommen soll und kei
   </tr>
 </table>
 
-### Auswirkungen unterschiedlicher discriminator.path-Angaben (OHNE exactly)
+### Effects of different discriminator.path settings (WITHOUT exactly)
 
-#### discriminator.path = "code" (CodeableConcept-Ebene) (OHNE exactly)
+#### discriminator.path = "code" (CodeableConcept level) (WITHOUT exactly)
 
 <table class="my-table">
   <tr>
@@ -151,7 +151,7 @@ Wenn im Slice **genau 1 Coding** mit den angegeben Werten vorkommen soll und kei
   </tr>
 </table>
 
-#### discriminator.path = "code.coding" (Coding-Ebene) (OHNE exactly)
+#### discriminator.path = "code.coding" (Coding level) (WITHOUT exactly)
 
 <table class="my-table">
   <tr>
@@ -174,7 +174,7 @@ Wenn im Slice **genau 1 Coding** mit den angegeben Werten vorkommen soll und kei
   </tr>
 </table>
 
-#### discriminator.path = "code.coding.code" (Code-Ebene) (OHNE exactly)
+#### discriminator.path = "code.coding.code" (Code level) (WITHOUT exactly)
 
 <table class="my-table">
   <tr>
@@ -198,9 +198,9 @@ Wenn im Slice **genau 1 Coding** mit den angegeben Werten vorkommen soll und kei
   </tr>
 </table>
 
-### Auswirkungen unterschiedlicher discriminator.path-Angaben (MIT exactly)
+### Effects of different discriminator.path settings (WITH exactly)
 
-#### discriminator.path = "code" (CodeableConcept-Ebene) (MIT exactly)
+#### discriminator.path = "code" (CodeableConcept level) (WITH exactly)
 
 <table class="my-table">
   <tr>
@@ -223,7 +223,7 @@ Wenn im Slice **genau 1 Coding** mit den angegeben Werten vorkommen soll und kei
   </tr>
 </table>
 
-#### discriminator.path = "code.coding" (Coding-Ebene) (MIT exactly)
+#### discriminator.path = "code.coding" (Coding level) (WITH exactly)
 
 <table class="my-table">
   <tr>
@@ -246,7 +246,7 @@ Wenn im Slice **genau 1 Coding** mit den angegeben Werten vorkommen soll und kei
   </tr>
 </table>
 
-#### discriminator.path = "code.coding.code" (Code-Ebene) (MIT exactly)
+#### discriminator.path = "code.coding.code" (Code level) (WITH exactly)
 
 <table class="my-table">
   <tr>
@@ -272,45 +272,45 @@ Wenn im Slice **genau 1 Coding** mit den angegeben Werten vorkommen soll und kei
 
 ### Required Pattern vs. Fixed Value
 
-#### Rendering im IG vs. StructureDefinition
+#### Rendering in the IG vs. StructureDefinition
 
-Der IG Publisher passt das Rendering an die Hierachie an (siehe [Auswirkungen unterschiedlicher discriminator.path-Angaben (OHNE exactly)](#auswirkungen-unterschiedlicher-discriminatorpath-angaben-ohne-exactly)). Ausschlaggebend für die Beurteilung eines Slices ist immer die höchste Hierarchieebene. Das bedeutet, wird als `discriminator.path = "code"` angegeben, ist die relevante Information, ob es sich um ein Pattern ([ElementDefinition pattern\[x\]](https://build.fhir.org/elementdefinition-definitions.html#ElementDefinition.pattern_x_)) oder einen Fixed Value ([ElementDefinition fixed\[x\]](https://build.fhir.org/elementdefinition-definitions.html#ElementDefinition.fixed_x_)) handelt auf CodeableConcept-Ebene zu finden. In den darunter liegenden Hierarchien gibt der IG Publisher trotzdem "Fixed value" an, selbst wenn es vielleicht nur ein Pattern im Sinne der StructureDefinition ist.
+The IG Publisher adapts the rendering to the hierarchy (see [Effects of different discriminator.path settings (WITHOUT exactly)](#effects-of-different-discriminatorpath-settings-without-exactly)). The highest hierarchy level is always decisive for the assessment of a slice. This means that if `discriminator.path = "code"` is specified, the relevant information as to whether it is a pattern ([ElementDefinition pattern\[x\]](https://build.fhir.org/elementdefinition-definitions.html#ElementDefinition.pattern_x_)) or a fixed value ([ElementDefinition fixed\[x\]](https://build.fhir.org/elementdefinition-definitions.html#ElementDefinition.fixed_x_)) is found at the CodeableConcept level. In the hierarchies below, the IG Publisher still states "Fixed value", even if it may only be a pattern in terms of the StructureDefinition.
 
-#### Fixed Values im FSH setzen
+#### Setting fixed values in FSH
 
-Nur die Angabe von `exactly` im FSH führt in der StructureDefinition zu einem Fixed Value. Alles Andere führt zu Pattern in der StructureDefinition.
+Only specifying `exactly` in FSH results in a fixed value in the StructureDefinition. Everything else results in a pattern in the StructureDefinition.
 
 <table class="my-table">
   <tr>
     <th></th>
-    <th>OHNE <code>exactly</code></th>
-    <th>MIT <code>exactly</code></th>
+    <th>WITHOUT <code>exactly</code></th>
+    <th>WITH <code>exactly</code></th>
   </tr>
   <tr>
-    <td><strong>CodeableConcept-Ebene</strong></td>
-    <td>Ist auf der CodeableConcept-Ebene ein Pattern gesetzt, dann werden weitere Codings erlaubt.</td>
-    <td>Ist auf der CodeableConcept-Ebene ein Fixed Value gesetzt, dann werden keine weiteren Codings erlaubt. Darüber hinaus ist das Befüllen anderer Elemente als die Slice definierten verboten.</td>
+    <td><strong>CodeableConcept level</strong></td>
+    <td>If a pattern is set at the CodeableConcept level, additional codings are allowed.</td>
+    <td>If a fixed value is set at the CodeableConcept level, no additional codings are allowed. Furthermore, populating elements other than those defined by the slice is forbidden.</td>
   </tr>
   <tr>
-    <td><strong>Coding-Ebene</strong></td>
-    <td>Wenn auf Coding-Ebene ein Pattern gesetzt wird, können zusätzlich zum vorgegebenen Code auch displays, extensions etc. verwendet werden.</td>
-    <td>Wenn auf Coding-Ebene ein Fixed Value gesetzt wird, dann dürfen darunter nur die angegebenen Elmente mit den Fixed Values vorkommen und keine anderen Elemente, z.B. wenn system, code und display fixiert sind, dann müssen diese vorhanden sein und den vorgegebenen Werten entsprechen und z.B. eine version oder extension ist nicht erlaubt.</td>
+    <td><strong>Coding level</strong></td>
+    <td>If a pattern is set at the Coding level, in addition to the specified code, displays, extensions, etc. can also be used.</td>
+    <td>If a fixed value is set at the Coding level, only the specified elements with the fixed values may occur underneath, and no other elements, e.g. if system, code and display are fixed, then these must be present and match the specified values, and e.g. a version or extension is not allowed.</td>
   </tr>
   <tr>
-    <td><strong>Code-Ebene</strong></td>
-    <td colspan="2">Pattern und Fixed Value bedeuten für primitive Datentypen (system -> uri, code -> code) das gleiche - d.h. eine exakte Übereinstimmung ist erforderlich.</td>
+    <td><strong>Code level</strong></td>
+    <td colspan="2">Pattern and fixed value mean the same thing for primitive data types (system -> uri, code -> code) - i.e. an exact match is required.</td>
   </tr>
 </table>
 
-### Empfehlungen
+### Recommendations
 
-#### Zusätzliche Codings erlauben
+#### Allowing additional codings
 
-Wenn zusätzliche Code+System-Kombinationen erlaubt sein sollen, dann muss im `discriminator.path = "code"` (CodeableConcept-Ebene) verwendet werden.
-Ob zusätzliche Felder im vom Slice definierten Coding erlaubt sind (display, extension, ...) hängt davon ab, ob `exactly` auf `code` (CodeableConcept-Ebene) verwendet wird oder nicht. Bei der Verwendung von `exactly` auf `code` (CodeableConcept-Ebene) sind keine anderen Elemente erlaubt.
+If additional code+system combinations should be allowed, then `discriminator.path = "code"` (CodeableConcept level) must be used.
+Whether additional fields are allowed in the coding defined by the slice (display, extension, ...) depends on whether `exactly` is used on `code` (CodeableConcept level) or not. When using `exactly` on `code` (CodeableConcept level), no other elements are allowed.
 
-#### Nur genau eine Kombination aus Code + System erlaubt und keine andere
+#### Only one code + system combination allowed and no other
 
-Wenn keine zusätzlichen Code+System-Kombinationen erlaubt sein sollen, dann muss im  `discriminator.path = "code.coding"` oder `discriminator.path = "code.coding.code"` verwendet werden.
-Ob zusätzliche Felder im vom Slice definierten Coding erlaubt sind (display, extension,...) hängt davon ab, ob `exactly` auf `code.coding` verwendet wird oder nicht. Bei der Verwendung von `exactly` auf `code.coding` (Coding-Ebene) sind keine anderen Elemente erlaubt.
+If no additional code+system combinations should be allowed, then `discriminator.path = "code.coding"` or `discriminator.path = "code.coding.code"` must be used.
+Whether additional fields are allowed in the coding defined by the slice (display, extension, ...) depends on whether `exactly` is used on `code.coding` or not. When using `exactly` on `code.coding` (Coding level), no other elements are allowed.
 

@@ -48,6 +48,8 @@ pages:
     title: Reference IG
   developers-handbook.md:
     title: Developer's Handbook
+    slicing.md:
+      title: Slicing
   howToReadAnIG.md:
     title: How to read an IG
   base.md:
@@ -214,6 +216,7 @@ pages:
 menu:
   Home: index.html
   Developer's Handbook: developers-handbook.html
+    Slicing: slicing.html
   How to read an IG: howToReadAnIG.html
   Base IGs:
     Home: base.html

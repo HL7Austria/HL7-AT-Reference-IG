@@ -215,7 +215,8 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Developer's Handbook: developers-handbook.html
+  How to create an IG:
+    Developer's Handbook: developers-handbook.html
     Slicing: slicing.html
   How to read an IG: howToReadAnIG.html
   Base IGs:
